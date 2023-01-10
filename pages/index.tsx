@@ -45,6 +45,7 @@ export const Home = ({ pageProps }: { pageProps: any }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="py-8">
+        <h2 className="font-bold text-3xl text-center">Blogs</h2>
         <div className="shadow p-5 rounded-lg bg-white mx-auto 2xl:max-w-screen-2xl xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm">
           <div className="flex flex-row gap-4">
             <CategoryOpt
