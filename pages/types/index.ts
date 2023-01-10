@@ -49,3 +49,7 @@ export interface IPagination {
   setPage: (e: number) => void;
   totalPage: number;
 }
+
+export interface IPageProps {
+  layout: CategoryData
+}

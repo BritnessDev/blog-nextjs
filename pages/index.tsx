@@ -5,9 +5,9 @@ import { BlogCard } from "./components/blogCard";
 import { postData } from "./utils/services";
 import { useEffect, useState } from "react";
 import { SERVER_URL } from "./utils/config";
-import { post } from "./types";
+import { post, IPageProps } from "./types";
 
-export const Home = ({ pageProps }: { pageProps: any }) => {
+export const Home = ({ pageProps }: { pageProps: IPageProps }) => {
   const { categories, blogExist } = pageProps.layout;
   const [keyword, setKeyword] = useState("");
   const [categoryId, setCategoryId] = useState(-1);
@@ -16,7 +16,7 @@ export const Home = ({ pageProps }: { pageProps: any }) => {
   const [content, setContent] = useState([]);
 
   useEffect(() => {
-    if (page != -1) onSubmitHandler();
+    if (page > 0) onSubmitHandler();
   }, [page, keyword, categoryId]);
   useEffect(() => {
     // if there is blog data in server
